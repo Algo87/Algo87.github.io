@@ -1,0 +1,371 @@
+body{
+	font-family: 'azoft-sans', sans-serif;
+
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+.header-container{
+	width: 100%;
+	background-color: #16252a;
+	height: 720px;
+
+}
+.header-container h2{
+	font-size: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 auto;
+	color:#d3dee7;
+	font-weight: normal;
+	padding-top:45px;
+	padding-bottom: 46px;
+	line-height:113%;
+	max-width: 700px;
+	
+}
+.mapCardContainer{
+	max-width: 1170px;
+	text-align:center;
+	margin: 0 auto;
+}
+.mapCard{
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 758px 270px;
+	    grid-template-columns: 758px 270px;
+	grid-column-gap: 142px;
+	
+}
+.mapNavigation{
+	margin-top: 60px;
+	margin-bottom: 54px;
+}
+.card{
+	background-color: #0e191d;
+	border-radius:8px;
+	border: none;
+	width: 270px;
+	height: 356px;
+	
+}
+
+.card-img{
+	
+	text-align: center;
+}
+.card-img img{
+	margin-top: 60px;
+}
+
+.card-number{
+	font-size: 90px;
+	text-align: center;
+	color:#fff;
+	background: transparent;
+	/*padding-top: 18px;*/
+
+}
+.mln{
+	font-size: 30px;
+	color: #d3dee7;
+	text-align: center;
+	/*padding-bottom: 25px;
+	padding-top: 20px;*/
+}
+.buttonCard{
+	text-align: center;
+	max-width: 198px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+
+main{
+	text-align: center;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.main-container{
+	display: -ms-grid;
+	display: grid;
+	
+	-ms-grid-columns: 470px 370px 270px;
+	
+	    grid-template-columns: 470px 370px 270px;
+	
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+}
+.block1, .block2, .block3 {
+	border: 1px solid #e1e1e1;
+	border-radius: 8px;
+	margin-top: 70px;
+	box-shadow: 0 10px 20px 0px rgba(0, 0, 0, .1);
+
+	min-width:200px;
+	padding-bottom: 34px;
+	
+	
+}
+
+
+.block1 h3, .block2 h3, .block4 h3 {
+	padding: 36px 33px 30px 33px;
+	color:#16252a;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 1.2; 
+	text-align: left;
+	
+
+}
+.block1 p, .block2 p, .block3 p, .block4 p{
+	font-family: 'tahoma-379', sans-serif;
+	color: #848484; 
+	font-size: 14px; 
+	font-weight: normal;
+	padding: 0 33px 0 33px;
+	line-height: 1.5; 
+	text-align: left;
+
+}
+.block1 a{
+	font-size: 14px;
+	color: #0081f1;
+	font-family: 'tahoma-379', sans-serif;
+}
+.blockImg{
+	background-image: url(../images/denys.png);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-size: 100% auto;
+	/*max-width: 100%;*/ 
+	height: 60%;
+	margin-bottom: 22px;
+}
+.blockP{
+	padding-bottom: 20px;
+}
+
+.block4{
+	-ms-grid-column: 1;
+	    grid-column-start: 1;
+	grid-column-end: 4;
+	margin-bottom: 68px;
+	box-shadow: 0 10px 20px 0px rgba(0, 0, 0, .1);
+
+	width:1170px;
+	border: 1px solid #e1e1e1;
+	border-radius: 8px;
+
+}
+.block4 p{
+	padding-bottom: 33px;
+}
+.button-container{
+	text-align: left;
+	margin-left: 29px;
+	margin-right: 29px;
+	margin-bottom: 32px;
+
+
+}
+.buttonGradient{
+	color:#fff;
+	background: linear-gradient(to right, #a122e9, #ff2a55);
+	border: none;
+	
+}
+
+.buttonOwl{
+	border-radius: 23px;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 0px 48px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 48px;
+	font-family: 'azoft-sans';
+	display: inline-block;
+}
+.buttonBorder{
+	padding:0px 46px;
+	color:#a122ea;
+	background: transparent;
+	border: 2px solid #a122ea;
+	line-height: 44px;
+}
+
+
+a.buttonBorder.buttonOwl{
+	margin-left: 20px;
+	
+}
+
+
+@media screen and (max-width: 1170px){
+	.mapCardContainer{
+		
+		
+		margin: 0 auto;
+		padding-bottom: 15px;
+	}
+	.mapCard{
+		display: block;
+		padding-bottom: 20px;
+		width: 90%;
+		margin: 0 auto;
+
+	}
+	.card{
+		display: block;
+		margin:0 auto;
+		width: 270px;
+		height: auto;
+		padding-bottom: 20px;
+	}
+	.mapNavigation {
+
+		margin-top: 30px;
+		margin-bottom: 0px;
+	}
+
+	.main-container {
+		display:block;
+		margin: 0 auto;
+		
+
+	}
+	.block4, .block3, .block2, .block1{
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	.blockImg{
+		background-image: url(../images/denys.png);
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+		height: 200px;
+		
+	}
+	
+
+	
+
+	
+	.header-container{
+
+		height: auto;
+
+	}
+	.header-container h2{
+		font-size: 35px;
+		max-width: 400px;
+		margin:0 auto;
+		padding-top:25px;
+		padding-bottom: 25px;
+		line-height:113%;
+
+	}
+	
+}
+@media screen and (max-width: 768px){
+	.mapCardContainer{
+		max-width: 450px;
+		text-align:center;
+		margin: 0 auto;
+		padding-bottom: 15px;
+	}
+	.mapCard{
+
+		display: block;
+	}
+	.mapNavigation{
+
+		margin-top: 10px;
+		margin-bottom: 0px;
+		max-width: 450px;
+	}
+	#navigation{
+		width: 90%;
+		height: 40px;
+	}
+	#navigation text{
+		font-size: 25px;
+	}
+	.card{
+
+		display: block;
+		margin:0 auto;
+		width: 270px;
+		height: auto;
+		padding-bottom: 5px;
+
+	}
+
+	.card-img{
+
+		text-align: center;
+	}
+	.card-img img{
+		margin-top: 15px;
+	}
+
+	.card-number{
+		font-size: 30px;
+
+	}
+	.mln{
+		font-size: 18px;
+
+	}
+	.buttonCard{
+
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.header-container h2{
+		font-size: 20px;
+	}
+	
+	
+}
+@media screen and (max-width: 540px){
+	.button-container{
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 32px;
+	}
+	.button-container{
+
+
+		display: flex;
+		flex-flow: column wrap;
+
+
+
+	}
+	.buttonOwl {
+		
+		margin-left: 0px;
+		margin: 0 auto;
+		margin-top: 20px;
+
+
+	}
+	a.buttonBorder.buttonOwl {
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.buttonOwl {
+   
+	  	display: block; 
+	}
+	
+}

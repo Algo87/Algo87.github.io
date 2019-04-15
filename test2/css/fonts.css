@@ -1,0 +1,93 @@
+@font-face{
+
+font-family: 'azoft-sans';
+
+src: url('../fonts/azoft-sans/azoft-sans-1.eot');
+
+src: url('../fonts/azoft-sans/azoft-sans-1?#iefix') format('eot'),
+
+url('../fonts/azoft-sans/azoft-sans-1.woff') format('woff'),
+
+url('../fonts/azoft-sans/original-azoft-sans-1.ttf') format('truetype');
+
+/*url('../fonts/azoft-sans/azoft-sans-1.svg#webfont') format('svg');*/
+
+font-weight: normal;
+
+font-style: normal;
+
+}
+@font-face{
+
+font-family: 'azoftsans-bold';
+
+src: url('../fonts/azoftsans-bold/azoftsans-bold.eot');
+
+src: url('../fonts/azoftsans-bold/azoftsans-bold?#iefix') format('eot'),
+
+url('../fonts/azoftsans-bold/azoftsans-bold.woff') format('woff'),
+
+url('../fonts/azoftsans-bold/original-azoftsans-bold.ttf') format('truetype');
+
+/*url('../fonts/azoft-sans/azoft-sans-1.svg#webfont') format('svg');*/
+
+font-weight: bold;
+
+font-style: normal;
+
+}
+@font-face{
+
+font-family: 'azoftsans-italic';
+
+src: url('../fonts/azoftsans-italic/azoftsans-italic.eot');
+
+src: url('../fonts/azoftsans-italic/azoftsans-italic?#iefix') format('eot'),
+
+url('../fonts/azoftsans-italic/azoftsans-italic.woff') format('woff'),
+
+url('../fonts/azoftsans-italic/original-azoftsans-italic.ttf') format('truetype');
+
+/*url('../fonts/azoft-sans/azoft-sans-1.svg#webfont') format('svg');*/
+
+font-weight: normal;
+
+font-style: italic;
+
+}
+@font-face{
+
+font-family: 'azoftsans-bolditalic';
+
+src: url('../fonts/azoftsans-bolditalic/azoftsans-bolditalic.eot');
+
+src: url('../fonts/azoftsans-bolditalic/azoftsans-bolditalic?#iefix') format('eot'),
+
+url('../fonts/azoftsans-bolditalic/azoftsans-bolditalic.woff') format('woff'),
+
+url('../fonts/azoftsans-bolditalic/original-azoftsans-bolditalic.ttf') format('truetype');
+
+/*url('../fonts/azoft-sans/azoft-sans-1.svg#webfont') format('svg');*/
+
+font-weight: bold;
+
+font-style: italic;
+
+}
+@font-face{
+
+font-family: 'tahoma-379';
+
+src: url('../fonts/tahoma-379/tahoma-379.eot');
+
+src: url('../fonts/tahoma-379/tahoma-379.eot?#iefix') format('eot'),
+
+url('../fonts/tahoma-379/tahoma-379.woff') format('woff'),
+
+url('../fonts/tahoma-379/origoriginal-tahoma-379.ttf') format('truetype');
+
+/*url('../fonts/azoft-sans/azoft-sans-1.svg#webfont') format('svg');*/
+
+font-weight: normal;
+
+font-style: normal;
