@@ -1,0 +1,142 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#sliderContainer{
+	position: relative;
+	padding:50px 0px 10px 0px;
+}
+#slide-wrapper{
+	height: 300px;
+	width:450px;
+	margin: 0 auto;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+
+
+}
+.slide{
+	position: relative;
+	flex: 0 0 auto;
+	display: block;
+	height: 300px;
+	width: 450px;
+	min-width: 400px;
+	overflow: hidden;
+	border: 6px solid #ccc;
+	box-sizing: border-box;
+	opacity: 0.3;
+	left: 0px;
+	transition-delay: .5s;
+	transition: all 0.9s;
+	
+	
+}
+
+.slide img{
+	height: auto;
+	width:100%;
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
+  
+
+}
+.slider-navigation{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.nav_link{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #858ab3;
+	margin: 15px;
+}
+.nav_link:hover, .nav_link:active, .active{
+	background-color: #fff;
+
+}
+#prev-btn, #next-btn{
+	width: 45px;
+    height: 45px;
+    background: #ccc;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#next-btn{
+	right: 0px;
+}
+#prev-btn{
+	left: 0px;
+}
+
+
+
+#prev-btn div{
+	    top: 13px;
+	left: 10px;
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+
+}
+#prev-btn div, #prev-btn div:before{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+	z-index: 2;
+}
+
+#prev-btn div:before{
+	
+	content:"";
+	top: 8px;
+	left: 8px;
+	
+}
+
+
+
+#next-btn div{
+	top:13px;
+	right: 10px;
+	-webkit-transform: rotate(135deg);
+	        transform: rotate(135deg);
+}
+
+#next-btn div, #next-btn div:before{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+	z-index: 2;
+}
+
+#next-btn div:before{
+	content:"";
+	top: 8px;
+	left: 8px;
+	
+}
+
+.slider-btn{
+	height: 46px;
+	position: absolute;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	    width: 800px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    left: 50%;
+}
+
