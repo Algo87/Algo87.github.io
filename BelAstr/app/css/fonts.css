@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../fonts/opensans_bolf_macroman/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/opensans_bolf_macroman/OpenSans-Bold-webfont.eot?iefix") format("eot"), url("../fonts/opensans_bolf_macroman/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/opensans_bolf_macroman/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/opensans_bolf_macroman/OpenSans-Bold-webfont.svg#webfont") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../fonts/opensans_light_macroman/OpenSans-Ligth-webfont.eot");
+  src: url("../fonts/opensans_light_macroman/OpenSans-Ligth-webfont.eot?iefix") format("eot"), url("../fonts/opensans_light_macroman/OpenSans-Ligth-webfont.woff") format("woff"), url("../fonts/opensans_light_macroman/OpenSans-Ligth-webfont.ttf") format("truetype"), url("../fonts/opensans_light_macroman/OpenSans-Ligth-webfont.svg#webfont") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix") format("eot"), url("../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#webfont") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot");
+  src: url("../fonts/opensans_regular_macroman/OpenSans-Semibold-webfont.eot?iefix") format("eot"), url("../fonts/opensans_regular_macroman/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/opensans_regular_macroman/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../fonts/opensans_regular_macroman/OpenSans-Semibold-webfont.svg#webfont") format("svg");
+  font-weight: 600;
+  font-style: normal; }
