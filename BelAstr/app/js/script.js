@@ -63,7 +63,7 @@ e.preventDefault();
 
 			var scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
-			if(scrolled>=clientH){
+			if(scrolled>=clientH/2){
 				up.style.display="flex";
 				down.style.display="flex";
 			}else{
@@ -92,7 +92,7 @@ e.preventDefault();
 
 			var timerUp = setTimeout(function goUp() {
 				if(window.pageYOffset>partOfDistance){
-					
+
 					window.scrollTo(0, window.pageYOffset-partOfDistance);
 					timerUp= setTimeout(goUp, animationTime / countTacts);
 				}else{
