@@ -69,6 +69,40 @@ body {
 .burger_menu {
   display: none; }
 
+#down, #up {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  position: fixed;
+  right: 5%;
+  opacity: 0.3;
+  display: none;
+  justify-content: center; }
+
+#up {
+  top: calc(80% - 60px); }
+
+#down {
+  top: 80%; }
+
+.arrowDown, .arrowUp {
+  top: 6px;
+  width: 15px;
+  height: 15px;
+  border-top: #000 solid 2px;
+  border-right: #000 solid 2px;
+  opacity: 0.6;
+  position: relative; }
+
+.arrowDown {
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg); }
+
+.arrowUp {
+  top: 15px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
 .main_nav ul {
   display: flex;
   flex-wrap: wrap; }
