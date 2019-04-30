@@ -1,0 +1,102 @@
+@import url(app/libs/slick-carousel/slick/slick.css);
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserratbold/montserrat-bold-webfont.eot");
+  src: url("../fonts/Montserratbold/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserratbold/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/Montserratbold/montserrat-bold-webfont.woff") format("woff"), url("../fonts/Montserratbold/montserrat-bold-webfont.ttf") format("truetype"), url("../fonts/Montserratbold/montserrat-bold-webfont.svg#montserrat-bold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserratextrabold/montserrat-extrabold-webfont.eot");
+  src: url("../fonts/Montserratextrabold/montserrat-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserratextrabold/montserrat-extrabold-webfont.woff2") format("woff2"), url("../fonts/Montserratextrabold/montserrat-extrabold-webfont.woff") format("woff"), url("../fonts/Montserratextrabold/montserrat-extrabold-webfont.ttf") format("truetype"), url("../fonts/Montserratextrabold/montserrat-extrabold-webfont.svg#montserrat-extraBold") format("svg");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserratregular/montserrat-regular-webfont.eot");
+  src: url("../fonts/Montserratregular/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserratregular/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/Montserratregular/montserrat-regular-webfont.woff") format("woff"), url("../fonts/Montserratregular/montserrat-regular-webfont.ttf") format("truetype"), url("../fonts/Montserratregular/montserrat-regular-webfont.svg#montserrat-regular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat'; }
+
+.header {
+  max-width: 1250px;
+  height: 74px;
+  position: absolute;
+  right: calc((100% - 1250px) / 2);
+  left: calc((100% - 1250px) / 2);
+  top: 25px;
+  background: #FF9729;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo-promis {
+  padding: 0 35px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center; }
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 64px;
+  background: url("../img/backgroundsearch.png"); }
+
+.nav {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff; }
+  .nav ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 564px;
+    height: 18px;
+    justify-content: space-between;
+    padding: 0 40px; }
+    .nav ul li {
+      font-size: 14px;
+      font-weight: 700; }
+
+.fast-link {
+  background: #FF8B11;
+  width: 200px;
+  height: 74px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 74px;
+  color: #fff; }
+  .fast-link div {
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: middle; }
+  .fast-link a {
+    text-decoration: none;
+    color: #fff; }
+
+.language {
+  width: 90px;
+  height: 74px;
+  text-align: center;
+  line-height: 74px; }
+  .language img {
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle; }
