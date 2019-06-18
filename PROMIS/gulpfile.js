@@ -5,11 +5,12 @@ var concat=require('gulp-concat');
 var uglify=require('gulp-uglifyjs');
 var cssnano=require('gulp-cssnano');
 var rename=require('gulp-rename');
-// var autoprefixer=require('gulp-autoprefixer');
+var autoprefixer=require('gulp-autoprefixer');
 
 gulp.task('sass', async function(){
 	return gulp.src(['app/scss/**/*.scss', 'app/scss/**/*.sass', 'app/libs/**/*.scss'])
 	.pipe(sass())
+	.pipe(autoprefixer(['last 15 versions'], {cascade:true}))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream:true}))
 });
@@ -28,6 +29,7 @@ gulp.task('scripts', async function(){
 		'node_modules/slick-carousel/slick/slick.js',
 		'node_modules/jquery-validation/dist/jquery.validate.js',
 		'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js'
+		// 'node_modules/ymaps/dist/ymaps.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())

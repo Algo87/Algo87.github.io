@@ -11,6 +11,7 @@
   "dependencies": {
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-sass": "^4.0.2",
     "jquery": "^3.4.1",
     "jquery-easing": "0.0.1",
@@ -18,7 +19,8 @@
     "jqueryui": "^1.11.1",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "reset-scss": "^1.0.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "ymaps": "^0.1.1"
   },
   "devDependencies": {
     "@types/jquery": "^3.3.29",
