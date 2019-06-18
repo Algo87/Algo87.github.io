@@ -6,6 +6,7 @@ var uglify=require('gulp-uglifyjs');
 var cssnano=require('gulp-cssnano');
 var rename=require('gulp-rename');
 var autoprefixer=require('gulp-autoprefixer');
+var del=require('del');
 
 gulp.task('sass', async function(){
 	return gulp.src(['app/scss/**/*.scss', 'app/scss/**/*.sass', 'app/libs/**/*.scss'])
@@ -63,4 +64,22 @@ gulp.task('browser-sync', async function(){
 		notify:false
 	});
 });
+
+gulp.task('clear', async function(){
+	return del.sync('dist');
+});
+
+gulp.task('prebuild', async function(){
+
+	var buildCss=gulp.src('app/css/main.min.css')
+	.pipe(gulp.dest('dist/css'))
+
+	var buildJs=gulp.src('app/js/**/*')
+	.pipe(gulp.dest('dist/js'))
+
+	var buildHtml=gulp.src('app/*.html')
+	.pipe(gulp.dest('dist'));
+});
+
 gulp.task('default', gulp.parallel('sass', 'scripts', 'css-min', 'browser-sync', 'watch'));
+gulp.task('build', gulp.parallel('prebuild', 'clear', 'sass', 'scripts'));
