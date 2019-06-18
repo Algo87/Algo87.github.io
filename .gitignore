@@ -1,0 +1,4 @@
+#ignore folder node_modules
+node_modules/
+#ignore psd folder
+psd/
