@@ -72,15 +72,27 @@ gulp.task('clear', async function(){
 	return del.sync('dist');
 });
 
-gulp.task('img', async function(){
-	return gulp.src('app/img/**/*')
-	.pipe(cache(imagemin({
-		interlaced:true,
-		proressive:true,
-		svgoPlugins:[{removeViewBox:false}].
-		use:[pngquant()]
-	}))/**/)
-	.pipe(gulp.dest('dist/img'));
+// gulp.task('img', async function(){
+// 	return gulp.src('app/img/**/*')
+// 	.pipe(cache(imagemin({
+// 		interlaced:true,
+// 		proressive:true,
+// 		svgoPlugins:[{removeViewBox:false}].
+// 		use:[pngquant()]
+// 	}))/**/)
+// 	.pipe(gulp.dest('dist/img'));
+// });
+
+gulp.task('img', function() {
+    return gulp.src('app/img/**/*') // Берем все изображения из app
+        .pipe(cache(imagemin({ // С кешированием
+        // .pipe(imagemin({ // Сжимаем изображения без кеширования
+            interlaced: true,
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))/**/)
+        .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
 gulp.task('prebuild', async function(){
