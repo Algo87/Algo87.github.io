@@ -7,6 +7,9 @@ var cssnano=require('gulp-cssnano');
 var rename=require('gulp-rename');
 var autoprefixer=require('gulp-autoprefixer');
 var del=require('del');
+var imagemin=require('imagemin');
+var pngquant=require('pngquant');
+var cache=require('cache');
 
 gulp.task('sass', async function(){
 	return gulp.src(['app/scss/**/*.scss', 'app/scss/**/*.sass', 'app/libs/**/*.scss'])
@@ -69,6 +72,17 @@ gulp.task('clear', async function(){
 	return del.sync('dist');
 });
 
+gulp.task('img', async function(){
+	return gulp.src('app/img/**/*')
+	.pipe(cache(imagemin({
+		interlaced:true,
+		proressive:true,
+		svgoPlugins:[{removeViewBox:false}].
+		use:[pngquant()]
+	}))/**/)
+	.pipe(gulp.dest('dist/img'));
+});
+
 gulp.task('prebuild', async function(){
 
 	var buildCss=gulp.src('app/css/main.min.css')
@@ -80,8 +94,8 @@ gulp.task('prebuild', async function(){
 	var buildHtml=gulp.src('app/*.html')
 	.pipe(gulp.dest('dist'));
 
-	
+
 });
 
 gulp.task('default', gulp.parallel('sass', 'scripts', 'css-min', 'browser-sync', 'watch'));
-gulp.task('build', gulp.parallel('prebuild', 'clear', 'sass', 'scripts'));
+gulp.task('build', gulp.parallel('prebuild', 'clear', 'img', 'sass', 'scripts'));
