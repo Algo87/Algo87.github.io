@@ -71,10 +71,7 @@ gulp.task('clear', async function(){
 
 gulp.task('prebuild', async function(){
 
-	var buildCss=gulp.src(['app/css/main.min.css',
-		'app/css/fonts.css',
-		'app/css/main.css'
-		])
+	var buildCss=gulp.src('app/css/main.min.css')
 	.pipe(gulp.dest('dist/css'))
 
 	var buildJs=gulp.src('app/js/**/*')
@@ -83,8 +80,8 @@ gulp.task('prebuild', async function(){
 	var buildHtml=gulp.src('app/*.html')
 	.pipe(gulp.dest('dist'));
 
-
+	
 });
 
 gulp.task('default', gulp.parallel('sass', 'scripts', 'css-min', 'browser-sync', 'watch'));
-// gulp.task('build', gulp.parallel('prebuild', 'clear', 'sass', 'scripts'));
+gulp.task('build', gulp.parallel('prebuild', 'clear', 'sass', 'scripts'));
