@@ -87,4 +87,4 @@ gulp.task('prebuild', async function(){
 });
 
 gulp.task('default', gulp.parallel('sass', 'scripts', 'css-min', 'browser-sync', 'watch'));
-gulp.task('build', gulp.parallel('prebuild', 'clear', 'sass', 'scripts'));
+// gulp.task('build', gulp.parallel('prebuild', 'clear', 'sass', 'scripts'));
