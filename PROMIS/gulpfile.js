@@ -83,7 +83,7 @@ gulp.task('clear', async function(){
 // 	.pipe(gulp.dest('dist/img'));
 // });
 
-gulp.task('img', function() {
+gulp.task('img', async function() {
     return gulp.src('app/img/**/*') // Берем все изображения из app
         .pipe(cache(imagemin({ // С кешированием
         // .pipe(imagemin({ // Сжимаем изображения без кеширования
