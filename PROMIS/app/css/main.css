@@ -1629,6 +1629,12 @@ a {
 li {
   list-style: none; }
 
+p, div {
+  line-height: 25px;
+  font-size: 14px;
+  color: #5E574C;
+  font-family: 'montserratregular'; }
+
 .country-list {
   display: none; }
 

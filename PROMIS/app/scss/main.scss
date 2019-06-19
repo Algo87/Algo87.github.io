@@ -20,6 +20,20 @@ a{
 li{
 	list-style:none;
 }
+p, div {
+	line-height: 25px;
+    font-size: 14px;
+    color: #5E574C;
+    font-family: 'montserratregular';
+}
+// h3{
+// 	font-size: 20px;
+//     line-height: 25px;
+//     text-transform: uppercase;
+//     color: #5e574c;
+//     padding-bottom: 23px;
+//     padding-top: 23px;
+// }
 .country-list{
 	display:none;
 }
