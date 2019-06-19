@@ -7,8 +7,8 @@ var cssnano=require('gulp-cssnano');
 var rename=require('gulp-rename');
 var autoprefixer=require('gulp-autoprefixer');
 var del=require('del');
-var imagemin=require('imagemin');
-var pngquant=require('pngquant');
+var imagemin=require('gulp-imagemin');
+var pngquant=require('imagemin-pngquant');
 var cache=require('cache');
 
 gulp.task('sass', async function(){
