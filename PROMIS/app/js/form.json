@@ -1,0 +1,10 @@
+{
+	"success": true,
+	"errors":[
+		{"field":"email", "message":"wrong email"},
+		{"field":"name", "message": "min length 2"},
+		{"field": "phone", "message": "min length 5"}
+	]
+		
+	
+}

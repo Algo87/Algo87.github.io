@@ -53,7 +53,7 @@ gulp.task('watch', async function(){
 	
 	gulp.watch(['app/scss/**/*.scss', 'app/scss/**/*.sass'], gulp.parallel('sass'));
 	gulp.watch('app/*.html', gulp.parallel('code'));
-	gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts'));
+	gulp.watch(['app/js/common.js', 'app/libs/**/*.js', 'app/js/form.json'], gulp.parallel('scripts'));
 	gulp.watch('app/css/main.css', gulp.parallel('css-min'));
 });
 

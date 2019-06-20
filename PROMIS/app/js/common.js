@@ -214,27 +214,27 @@ $(document).ready(function() {
 
 		},
 		errorElement: "div",
-		
+
 		submitHandler: function(form) {
 			event.preventDefault();
 			$(form).find('input').css('border', '2px solid #e5e1db');
 			$(form).find('textarea').css('border', '2px solid #e5e1db')
-			alert();
-			cleanForm('contacts-form');
+			// alert();
+			// cleanForm('contacts-form');
 
 		},
 		highlight: function (element, errorClass, validClass) { 
-			
+
 			$(element).css('border', '2px solid #ff4141');
 
 		}, 
 
 		unhighlight: function (element, errorClass, validClass) { 
-			
+
 			$(element).css('border', '2px solid #ff8b11');
 		}
 	});
-	
+
 
 	function cleanForm(formId){
 		var form = document.getElementById(formId);
@@ -380,7 +380,7 @@ function productionSliderOpen(){
 			if(($(window).height()<=500)&&($(window).width()>=1024)){
 				
 				var sliderHeight=$(window).height()*0.9 - 30;
-			$('.production-slide').height(sliderHeight);
+				$('.production-slide').height(sliderHeight);
 
 			}
 			
@@ -396,11 +396,11 @@ function productionSliderOpen(){
 					$('.slick-dots').css('top',  topDots );
 				}
 				if(($(window).height()<=500)&&($(window).width()>=1024)){
-				
-				var sliderHeight=$(window).height()*0.9 - 30;
-			$('.production-slide').height(sliderHeight);
 
-			}
+					var sliderHeight=$(window).height()*0.9 - 30;
+					$('.production-slide').height(sliderHeight);
+
+				}
 			});
 			console.log( $('.popup-slider'));
 			console.log(countSlide);
@@ -997,8 +997,8 @@ function popupHonorActive(){
 			
 			$(window).resize(function(){
 				var dotsTop=($('.slick-slide').height());
-			$('.about-slider').find('.slick-dots').css('top', dotsTop);
-			$('.about-slide').find($('.production-slide-text')).width($('.about-slide').find('img').width());
+				$('.about-slider').find('.slick-dots').css('top', dotsTop);
+				$('.about-slide').find($('.production-slide-text')).width($('.about-slide').find('img').width());
 			})
 		})	
 		$('.popup-exit').click(function(){
@@ -1082,3 +1082,24 @@ function newsPageBorderBottom(){
 $(window).resize(newsPageBorderBottom);
 
 newsPageBorderBottom();
+
+$(function(){
+	if(!!$('#contacts-form')){
+		$('#contacts-form').submit(function(e){
+			e.preventDefault();
+			var data=$(this).serialize();
+			console.log(data);
+			$.post("form.json",
+				data,
+				function(data){
+					if(data.success==true){
+						// cleanForm("contacts-form");
+						alert('thank you!!!!');
+					}else{
+						alert('no');
+					}
+				})
+		})
+	}
+	
+})
