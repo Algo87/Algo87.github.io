@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>contacts</title>
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=087760cc-61ff-4da5-b54e-6ad29ccbe93e
+	&lang=ru_RU"
+	type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+
+</head>
+<body class='body body_position_open'>
+	<div class="wrapper">
+		<header class="header">
+
+			<div class="logo-promis">
+				<a href="home.html">
+					<img src="img/logo.svg">
+				</a>
+			</div>
+			<div class='search'>
+				<img src="img/search.png">
+			</div>
+			<form class='search_form'>
+				<input type="search" name="search-input">
+				<div id='close-search'>
+					<img src="img/close-search.svg">
+				</div>
+			</form>
+			<nav class="nav">
+
+				<ul>
+
+					<li class='catalog-ul-list'>
+						<a href="catalog.html">Каталог</a>
+						<ul class='main-nav level-2'>
+							<li data-id='borony' data-level='2'>
+								<a href='#'>Бороны </a>
+								<ul class='main-nav level-3' data-id-ul='borony'>
+									<li data-id='borony-1' data-level='3'>
+										<a href="#">borony-1</a>
+										<ul class='main-nav level-4' data-id-ul='borony-1'>
+											<li data-id='borony-11' data-level='4'><a href="#">borony-11</a></li>
+											<li data-id='borony-12' data-level='4'><a href="#">borony-12</a></li>
+											<li data-id='borony-13' data-level='4'><a href="#">borony-13</a></li>
+
+										</ul>
+									</li>
+									<li data-id='borony-2' data-level='3'><a href="#">borony-2</a></li>
+
+								</ul>
+							</li>
+							<li data-id='grabli' data-level='2'> 
+								<a href='#'>Грабли </a>
+								<ul class='main-nav level-3' data-id-ul='grabli'>
+									<li data-id='grabli-1'><a href="#">grabli-1</a></li>
+									<li data-id='grabli-2'>
+										<a href="#">grabli-2</a>
+										<ul class='main-nav level-4' data-id-ul='grabli-2'>
+											<li data-id='grabli-21' data-level='4'><a href="#">grabli-21</a></li>
+											<li data-id='grabli-22' data-level='4'><a href="#">grabli-22</a></li>
+											<li data-id='grabli-23' data-level='4'><a href="#">grabli-23</a></li>
+
+										</ul>
+									</li>
+									<li data-id='grabli-3'><a href="#">grabli-3</a></li>
+									<li data-id='grabli-4'>
+										<a href="#">grabli-4</a>
+										<ul class='main-nav level-4' data-id-ul='grabli-4'>
+											<li data-id='grabli-41' data-level='4'><a href="#">grabli-41</a></li>
+											<li data-id='grabli-42' data-level='4'><a href="#">grabli-42</a></li>
+
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li data-id='kartofelekopateli' data-level='2'><a href='#'> Картофелекопатели</a> </li>
+							<li data-id='konbainy-zernoyborochnye' data-level='2'> <a href='#'>Комбайны зерноуборочные </a></li>
+							<li data-id='konbainy-cormoyborochnye' data-level='2'><a href='#'> Комбайны кормоуборочные </a></li>
+							<li data-id='kormorazdatchici' data-level='2'> <a href='#'>Кормораздатчики</a> </li>
+							<li data-id='kosilci' data-level='2'>
+								<a href='#'>Косилки</a>
+								<ul class='main-nav level-3' data-id-ul='kosilci'>
+									<li data-id='kosilci-1' data-level='3'>
+										<a href="#">kosilci-1</a>
+										<ul class='main-nav level-4' data-id-ul='kosilci-1'>
+											<li data-id='kosilci-11' data-level='4'><a href="#">kosilci-11</a></li>
+											<li data-id='kosilci-12' data-level='4'><a href="#">kosilci-12</a></li>
+											<li data-id='kosilci-13' data-level='4'><a href="#">kosilci-13</a></li>
+											<li data-id='kosilci-14' data-level='4'><a href="#">kosilci-14</a></li>
+										</ul>
+									</li>
+									<li data-id='kosilci-2' data-level='3'><a href="#">kosilci-2</a></li>
+									<li data-id='kosilci-3' data-level='3'><a href="#">kosilci-3</a></li>
+									<li data-id='kosilci-4' data-level='3'><a href="#">kosilci-4</a></li>
+								</ul>
+							</li>
+							<li data-id='kyltivatory' data-level='2'><a href='#'> Культиваторы </a></li>
+							<li data-id='plygi' data-level='2'> <a href='#'>Плуги </a></li>
+							<li data-id='posevnie-agregaty' data-level='2'> <a href='#'>Посевные агрегаты </a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="about.html">О компании</a>
+					</li>
+					<li>
+						<a href="production.html" >Производство</a>
+					</li>
+					<li>
+						<a href="news.html" >Новости</a>
+					</li>
+					<li>
+						<a href="contacts.html" class='header-nav-active'>Контакты</a>
+					</li>
+
+				</ul>
+
+			</nav>
+			<div class="fast-link">
+				<div>
+					<div>
+						<a href="#">sales@promis.by</a>
+					</div>
+					<div>
+						8-017-297-40-29
+					</div>
+				</div>
+			</div>
+			<div class="language">
+				<img src="img/Flag_of_Britain .png">
+			</div>
+		</header>
+		<header class='header_mobile'>
+			<div class='burger_menu'>
+				<div class='burger-menu-button burger_menu_close'>
+					
+				</div>
+			</div>
+			<nav class='nav-mobile nav-mobile-close'>
+				<ul>
+					<li>
+						<a href="home.html">Главная</a>
+					</li>
+					<li class='catalog-li'>
+						<a  href="catalog.html">Каталог</a>
+						<span class='mobile-catalog-list'></span>
+						<ul class='mobile-catalog mobile-catalog-close'>
+							<span class='back'>Назад</span>
+							<li><a href="#">Борона Луговая</a></li>
+							<li><a href="#">Бороны дисковые</a></li>
+							<li><a href="#">Бороны зубовые</a></li>
+							<li><a href="#">Бороны ротационные</a></li>
+							<li><a href="#">Грабли</a></li>
+							<li><a href="#">Картофелекопатели</a></li>
+							<li><a href="#">Комбайны зерноуборочные</a></li>
+							<li><a href="#">Комбайны кормоуборочные</a></li>
+							<li><a href="#">Кормораздатчики</a></li>
+							<li><a href="#">Косилки</a></li>
+							<li><a href="#">Культиваторы</a></li>
+							<li><a href="#">Плуги</a></li>
+							<li><a href="#">Посевные агрегаты</a></li>
+							<li><a href="#">Пресс-подборщики</a></li>
+							<li><a href="#">Разбрасыватели удобрений</a></li>
+							<li><a href="#">Свеклоуборочные комбайны</a></li>
+							<li><a href="#">Сеялки</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="about.html">О компании</a>
+					</li>
+					<li>
+						<a href="production.html">Производство</a>
+					</li>
+					<li>
+						<a href="news.html">Новости</a>
+					</li>
+					<li>
+						<a href="contacts.html">Контакты</a>
+					</li>
+
+				</ul>
+			</nav>
+			<a class='logo-mobile' href="#">
+				<img src="img/logo.svg">
+			</a>
+			<div class='rigth-part'>
+				<div class='search-mobile'>
+					<img src="img/search-icon-dark.svg" alt="">
+
+				</div>
+				<a href="#" class='flag-mobile'>
+					<img src="img/gb-flag.svg">
+				</a>
+			</div>
+		</header>
+		<main class='main-bg'>
+			<div class="bg-head-img">
+				<img src="img/news-header-img.png">
+			</div>
+			<div class="header-breadcrumbs">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+			<h1>Контакты</h1>
+		</main>
+		<section class='contacts-container'>
+			<div class='contacts-block'>
+				<div class='contacts-left-part contact contact-belarus contact-visible contacts-left-part-desctop'>
+					<ul>
+						<li class='vitebsk-region'><a href="" class='contacts-active'>Витебская область</a></li>
+						<li><a href="">Гомельская область</a></li>
+						<li><a href="">Могилевская область</a></li>
+						<li><a href="">Минск</a></li>
+						<li class='minsk-region'><a href="" >Минская область</a></li>
+						<li><a href="">Внутренний рынок</a></li>
+					</ul>
+
+
+				</div>
+				
+
+				<div class='contacts-left-part contact contact-export contacts-left-part-desctop'>
+					<ul>
+						<li class='specialist-1'><a href="" class='contacts-active'>Ведущий специалист по продажам </a></li>
+						<li class='specialist-2'><a href="">Начальник отдела продаж</a></li>
+						<li class='specialist-3'><a href="">Специалист по продажам</a></li>
+
+					</ul>
+
+
+				</div>
+				
+				<div class='contacts-rigth-part'>
+					<ul class='contacts-rigth-part-title contacts-rigth-part-desctop'>
+						<li class='contacts-rigth-part-item active-contacts-main-title contact contact-belarus'>Беларусь</li>
+						<li class='contacts-rigth-part-item contact contact-export'>Страны зарубежья</li>
+					</ul>
+					<select name='right-select' id="right-select" class='select-right-part'>
+						
+						<option class='contact contact-belarus'>Беларусь</option>
+						<option class='contact contact-export'>Страны зарубежья</option>
+
+					</select>
+					<select data-id='left-select' class='contact-belarus select-left-part select-visible'>
+						<option class='vitebsk-region'>Витебская область</option>
+						<option >Гомельская область</option>
+						<option>Могилевская область</option>
+						<option>Минск</option>
+						<option class='minsk-region'>Минская область</option>
+						<option>Внутренний рынок</option>
+
+						
+					</select>
+					<select name='tabs-left' data-id='left-select' class='contact-export select-left-part'>
+						<option class='specialist-1'>Ведущий специалист по продажам </option>
+						<option class='specialist-2'>Начальник отдела продаж</option>
+						<option class='specialist-3'>Специалист по продажам</option>
+					</select>
+					<div class='contacts-main contact-belarus contact contact-visible vitebsk-region'>
+						<div class='contacts-main-content'>
+							<div class='contacts-person'>
+								<div class='contacts-person-img'>
+									<img src="img/contacts-person.png">
+								</div>
+								<div>
+									<h3>
+										Курило <br>Евгений Александрович
+									</h3>
+									<span>
+										Менеджер по продажам Витебская область
+									</span>
+								</div>
+							</div>
+							<ul class='contacts-data'>
+								<li>
+									<span>Телефон:</span>
+									<a>+375 (29) 164 63 62</a>
+								</li>
+								<li>
+									<span>Факс:</span>
+									<a>+375 (17) 297 40 29</a>
+								</li>
+								<li>
+									<span>Skype:</span>
+									<a style="color: #FF8B11;">Курило Евгений</a>
+								</li>
+								<li>
+									<span>E-mail:</span>
+									<a style="color: #FF8B11;">e.kurilo@promis.by</a>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div class='contacts-main contact minsk-region'>
+						<div class='contacts-main-content'>
+							<div class='contacts-person'>
+								<div class='contacts-person-img'>
+									<img src="img/tractor-grain-mixer-rural-denmark-53622.png">
+								</div>
+								<div>
+									<h3>
+										Курило <br>Евгений Александрович
+									</h3>
+									<span>
+										Менеджер по продажам Минская область
+									</span>
+								</div>
+							</div>
+							<ul class='contacts-data'>
+								<li>
+									<span>Телефон:</span>
+									<a>+375 (29) 164 63 62</a>
+								</li>
+								<li>
+									<span>Факс:</span>
+									<a>+375 (17) 297 40 29</a>
+								</li>
+								<li>
+									<span>Skype:</span>
+									<a style="color: #FF8B11;">Курило Евгений</a>
+								</li>
+								<li>
+									<span>E-mail:</span>
+									<a style="color: #FF8B11;">e.kurilo@promis.by</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					
+					<div class='contacts-main contact-export contact specialist-1'>
+						<div class='contacts-main-content'>
+							<div class='contacts-person'>
+								<div class='contacts-person-img'>
+									<img src="img/contacts-person.png">
+								</div>
+								<div>
+									<h3>
+										Васильев <br>Евгений Александрович
+									</h3>
+									<span>
+										Ведущий специалист по продажам 
+									</span>
+								</div>
+							</div>
+							<ul class='contacts-data'>
+								<li>
+									<span>Телефон:</span>
+									<a>+375 (29) 164 63 62</a>
+								</li>
+								<li>
+									<span>Факс:</span>
+									<a>+375 (17) 297 40 29</a>
+								</li>
+								<li>
+									<span>Skype:</span>
+									<a style="color: #FF8B11;">Курило Евгений</a>
+								</li>
+								<li>
+									<span>E-mail:</span>
+									<a style="color: #FF8B11;">e.kurilo@promis.by</a>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					
+					<div class='contacts-main contact specialist-2'>
+						<div class='contacts-main-content'>
+							<div class='contacts-person'>
+								<div class='contacts-person-img'>
+									<img src="img/contacts-person.png">
+								</div>
+								<div>
+									<h3>
+										Фрося <br>Евгений Александрович
+									</h3>
+									<span>
+										Начальник отдела продаж
+									</span>
+								</div>
+							</div>
+							<ul class='contacts-data'>
+								<li>
+									<span>Телефон:</span>
+									<a>+375 (29) 164 63 62</a>
+								</li>
+								<li>
+									<span>Факс:</span>
+									<a>+375 (17) 297 40 29</a>
+								</li>
+								<li>
+									<span>Skype:</span>
+									<a style="color: #FF8B11;">Курило Евгений</a>
+								</li>
+								<li>
+									<span>E-mail:</span>
+									<a style="color: #FF8B11;">e.kurilo@promis.by</a>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+
+					<div class='contacts-main contact specialist-3'>
+						<div class='contacts-main-content'>
+							<div class='contacts-person'>
+								<div class='contacts-person-img'>
+									<img src="img/boroni-1.jpg">
+								</div>
+								<div>
+									<h3>ЗАХАРЧИЦ
+										<br>АЛЕКСАНДР ОЛЕГОВИЧ
+									</h3>
+									<span>
+										Специалист по продажам
+									</span>
+								</div>
+							</div>
+							<ul class='contacts-data'>
+								<li>
+									<span>Телефон:</span>
+									<a>+375 (29) 164 63 62</a>
+								</li>
+								<li>
+									<span>Факс:</span>
+									<a>+375 (17) 297 40 29</a>
+								</li>
+								<li>
+									<span>Skype:</span>
+									<a style="color: #FF8B11;">АЛЕКСАНДР ОЛЕГОВИЧ</a>
+								</li>
+								<li>
+									<span>E-mail:</span>
+									<a style="color: #FF8B11;">a.kurilo@promis.by</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<form class='contacts-form' id='contacts-form'>
+						<div class='contacts-input-grup'>
+							
+							<label for='input-name'>Ваше имя:</label>
+							<input type="text" name="name" id='input-name'>
+
+						</div>
+
+						<div class='contacts-input-grup'> 
+							<label for='input-phone'>Ваш телефон:</label>
+							<input type="text" name="phone" id='input-phone'>
+						</div>
+						<div class='contacts-input-grup'>
+							<label for='input-email'>Ваш e-mail:</label>
+							<input type="email" name="email" id='input-email'>
+						</div>
+						<div class='contacts-input-grup textarea'>
+							<label for='message-text'>Текст сообщения:</label>
+							<textarea id='message-text'></textarea>
+						</div>
+						<button type="submit" class='orange-button contacts-btn'>Cтать партнером</button>
+					</form>
+
+				</div>
+
+
+			</div>
+		</section>
+		<section class='contact-map-container'>
+			<div class='contact-map' id='contact-map' style='background:#ccc;'></div>
+			<div class='contacts-info'>
+				<div class='address-block contacts-info-block'>
+					<img src="img/address-icon.svg">
+					<div class='adderss-info info'>
+						<h3>Адрес:</h3>
+						<p>Беларусь, 220021 г.&nbsp;Минск, переулок Бехтерева, д.12, офис&nbsp;7</p>
+					</div>
+				</div>
+				<div class='phone-block contacts-info-block'>
+					<img src="img/phone-icon.svg">
+					<div class='phone-info info'>
+						<h3>Телефоны:</h3>
+						<p> <a href='#'>+375 (17) 297-40-29<br>+375 (17) 291-24-15</a></p>
+					</div>
+				</div>
+				<div class='time-block contacts-info-block'>
+					<img src="img/time-icon.svg">
+					<div class='time-info info'>
+						<h3>Время работы:</h3>
+						<p>пн.-чт. - 8:30 - 17:30,<br>пт. - 8:30 - 17:00<br>без перерывов</p>
+					</div>
+				</div>
+				<div class='email-block contacts-info-block'>
+					<img src="img/email-icon.svg">
+					<div class='email-info info'>
+						<h3>E-mail:</h3>
+						<p>sales@promis.by</p>
+					</div>
+				</div>
+
+
+
+			</div>
+
+		</section>
+		<section class='subscription-wrapper'>
+			<div class='subscription-block'>
+				<form class='subscription-form' method="post" action id='subscription-form'>
+					<h2 class='subscription-title'>Подпишитесь на рассылку</h2>
+					<div class='input-group'>
+						<input class='subscription-input' type="text" name="email" placeholder="введите ваш e-mail">
+					</div>
+
+					<button type="submit" class='subscription-button' id='subscription-button'>
+						<span class='btn'></span>
+					</button>
+					<button type="submit" class='subscription-button-mobile'>Подписаться</button>
+
+				</form>
+				<div class='subscription-block-bg'> 
+				</div>
+			</div>
+		</section>
+		<footer class='footer-container'>
+			<div class='footer'>
+				<div class='info-contact'>
+					<p class='address-promis'>© ООО «Промис Альянс»&nbsp;Беларусь, 220021 
+						г.&nbsp;Минск, пер.&nbsp;Бехтерева, 
+						д.&nbsp; 12 <br>Время работы: 8.30 - 17.30</p>
+						<p class='phone-promis'><a href="#">+375 (17) 297-40-29</a></p>
+						<p  class='phone-promis'><a href="#">+375 (17) 291-24-15</a></p>
+						<p class='phone-promis'> <a href='#'>sales@promis.by</a></p>
+					</div>
+					<div class='footer-catalog footer-col footer-col-2'>
+						<ul>
+							<li><a href='#'>Бороны</a></li>
+							<li><a href='#'>Грабли</a></li>
+							<li><a href='#'>Кормораздатчики</a></li>
+							<li><a href='#'>Комбайны</a></li>
+							<li><a href='#'>Сеялки</a></li>
+							<li><a href='#'>Сопутствующие товары</a></li>
+							<li><a href='#'>Транспортер навозоудаления</a></li>
+						</ul>
+					</div>
+					<div class="footer-col footer-catalog footer-col-3">
+						<ul>
+							<li><a href='#'>Плуги</a></li>
+							<li><a href='#'>Посевные агрегаты</a></li>
+							<li><a href='#'>Пресс-подборщики</a></li>
+							<li><a href='#'>Косилки</a></li>
+							<li><a href='#'>Культиваторы</a></li>
+							<li><a href='#'>Трактора</a></li>
+							<li><a href='#'>Разбрасыватели удобрений</a></li>
+						</ul>
+					</div>
+					<div class='footer-col-4 footer-col footer-menu'>
+						<ul>
+							<li><a href='#'>Каталог</a></li>
+							<li><a href='#'>О компании</a></li>
+							<li><a href='#'>Производство</a></li>
+							<li><a href='#'>Новости</a></li>
+							<li><a href='#'>Контакты</a></li>
+							<li><a href='#'>Карта сайта</a></li>
+
+						</ul>
+					</div>
+				</div>
+				<div class='footer-autor'>
+					<p>Разарботка сайта – <a href='#'>Gresbi.by</a>
+					</p>
+				</div>
+
+			</footer>
+
+		</div>
+		<div class='popup-search'>
+			<div class='popup-search-inner'>
+				<input type="search" name="mobile-popup-search" class='mobile-popup-search'>
+				<img src="img/close-modal.svg">
+				
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/libs.min.js"></script>
+
+		<script type="text/javascript" src="js/common.js"></script>
+
+
+	</body>
+	</html>

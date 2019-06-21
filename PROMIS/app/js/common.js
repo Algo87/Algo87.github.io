@@ -185,16 +185,33 @@ $(document).ready(function() {
 		rules: {
 			email: {
 				email: true,
-				required: true
+				required: true,
+				remote: {
+					url: "js/form.json",
+					type:"post",
+					data: {
+						name: function(){
+							return $("#input-name").val();
+						}
+					}
+				}
 			},
 			name: {
 				required:true,
-				minlength: 2
+				minlength: 2,
+				remote: {
+					url: "js/form.json"
+				}
+
+				
 			},
 			phone: {
 				required:true,
-				minlength:5
+				minlength:5,
+				
+
 			}
+
 		},
 
 		messages: {
@@ -202,6 +219,8 @@ $(document).ready(function() {
 			email: {
 				email: "Введите корректный e-mail",
 				required: "Поле обязательно к заполнению"
+
+
 			},
 			name: {
 				required:"Поле обязательно к заполнению",
@@ -210,21 +229,24 @@ $(document).ready(function() {
 			phone:{
 				required:"Поле обязательно к заполнению",
 				minlength: "введите не менее 5-х символов"
-			}
+			},
+			remote:{ }
 
 		},
 		errorElement: "div",
 
 		submitHandler: function(form) {
+			
+			
 			event.preventDefault();
 			$(form).find('input').css('border', '2px solid #e5e1db');
-			$(form).find('textarea').css('border', '2px solid #e5e1db')
-			// alert();
-			// cleanForm('contacts-form');
+			$(form).find('textarea').css('border', '2px solid #e5e1db');
+			alert("thank you!!!");
+			cleanForm('contacts-form');
 
 		},
 		highlight: function (element, errorClass, validClass) { 
-
+			console.log(element)
 			$(element).css('border', '2px solid #ff4141');
 
 		}, 
@@ -1083,23 +1105,3 @@ $(window).resize(newsPageBorderBottom);
 
 newsPageBorderBottom();
 
-$(function(){
-	if(!!$('#contacts-form')){
-		$('#contacts-form').submit(function(e){
-			e.preventDefault();
-			var data=$(this).serialize();
-			console.log(data);
-			$.post("form.json",
-				data,
-				function(data){
-					if(data.success==true){
-						// cleanForm("contacts-form");
-						alert('thank you!!!!');
-					}else{
-						alert('no');
-					}
-				})
-		})
-	}
-	
-})

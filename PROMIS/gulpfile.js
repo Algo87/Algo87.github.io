@@ -10,6 +10,8 @@ var del=require('del');
 var imagemin=require('gulp-imagemin');
 var pngquant=require('imagemin-pngquant');
 var cache=require('cache');
+var imgCompress  = require('imagemin-jpeg-recompress');
+
 
 gulp.task('sass', async function(){
 	return gulp.src(['app/scss/**/*.scss', 'app/scss/**/*.sass', 'app/libs/**/*.scss'])
@@ -72,28 +74,27 @@ gulp.task('clear', async function(){
 	return del.sync('dist');
 });
 
-// gulp.task('img', async function(){
-// 	return gulp.src('app/img/**/*')
-// 	.pipe(cache(imagemin({
-// 		interlaced:true,
-// 		proressive:true,
-// 		svgoPlugins:[{removeViewBox:false}].
-// 		use:[pngquant()]
-// 	}))/**/)
-// 	.pipe(gulp.dest('dist/img'));
-// });
 
 gulp.task('img', async function() {
-    return gulp.src('app/img/**/*') // Берем все изображения из app
-        .pipe(cache(imagemin({ // С кешированием
-        // .pipe(imagemin({ // Сжимаем изображения без кеширования
-            interlaced: true,
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))/**/)
-        .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
+    return gulp.src('app/img/**/*') 
+        .pipe(imagemin([
+        	imgCompress({
+        		loops: 4,
+        		min:70,
+        		max:80,
+        		quality:'high'
+        	}),
+        	imagemin.gifsicle(),
+        	imagemin.optipng(),
+        	imagemin.svgo()
+        	]
+        
+            
+        ))
+        .pipe(gulp.dest('dist/img')); 
 });
+    
+
 
 gulp.task('prebuild', async function(){
 
@@ -110,4 +111,4 @@ gulp.task('prebuild', async function(){
 });
 
 gulp.task('default', gulp.parallel('sass', 'scripts', 'css-min', 'browser-sync', 'watch'));
-gulp.task('build', gulp.parallel('prebuild', 'clear', 'img', 'sass', 'scripts'));
+gulp.task('build', gulp.parallel('clear', 'prebuild', 'img', 'sass', 'scripts'));
