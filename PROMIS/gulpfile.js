@@ -108,7 +108,7 @@ gulp.task('prebuild', async function(){
 	.pipe(gulp.dest('dist'));
 
 	var buildFonts=gulp.src('app/fonts/**/*')
-	.pipe(gulp.dest('dist'));
+	.pipe(gulp.dest('dist/fonts'));
 
 
 });
