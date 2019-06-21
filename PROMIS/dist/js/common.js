@@ -168,6 +168,8 @@ $(document).ready(function() {
 		highlight: function (element, errorClass, validClass) { 
 			$('#subscription-button').removeClass('subscription-button-active');
 			$('.btn').removeClass('btn-active');
+			$(".subscription-button-mobile").addClass('subscription-button-mobile-active');
+			console.log('d');
 
 
 		}, 
@@ -176,6 +178,7 @@ $(document).ready(function() {
 			
 			$('#subscription-button').addClass('subscription-button-active');
 			$('.btn').addClass('btn-active');
+			$(".subscription-button-mobile").removeClass('subscription-button-mobile-active');
 		}
 	});
 
