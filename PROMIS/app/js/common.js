@@ -187,21 +187,16 @@ $(document).ready(function() {
 				email: true,
 				required: true,
 				remote: {
-					url: "js/form.json",
-					type:"post",
-					data: {
-						name: function(){
-							return $("#input-name").val();
-						}
-					}
+					url: "js/form.json"
+
+					
+
 				}
 			},
 			name: {
 				required:true,
 				minlength: 2,
-				remote: {
-					url: "js/form.json"
-				}
+				
 
 				
 			},
