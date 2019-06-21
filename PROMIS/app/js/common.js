@@ -162,14 +162,15 @@ $(document).ready(function() {
 			$('#subscription-button').removeClass('subscription-button-active');
 			
 			$('.btn').removeClass('btn-active');
-			alert();
+			$(".subscription-button-mobile").removeClass('subscription-button-mobile-active');
+			alert("thank for subscription!!!");
 			cleanForm('subscription-form');
 		},
 		highlight: function (element, errorClass, validClass) { 
 			$('#subscription-button').removeClass('subscription-button-active');
 			$('.btn').removeClass('btn-active');
 			$(".subscription-button-mobile").addClass('subscription-button-mobile-active');
-			console.log('d');
+			
 
 
 		}, 
@@ -244,7 +245,7 @@ $(document).ready(function() {
 
 		},
 		highlight: function (element, errorClass, validClass) { 
-			console.log(element)
+			
 			$(element).css('border', '2px solid #ff4141');
 
 		}, 
@@ -422,8 +423,7 @@ function productionSliderOpen(){
 
 				}
 			});
-			console.log( $('.popup-slider'));
-			console.log(countSlide);
+			
 		});
 
 
@@ -582,7 +582,7 @@ function tabsChange(){
 
 					var currentOption= $('.select-left-part.'+arr[i]).find(":selected");
 
-					console.log(currentOption);
+					
 
 					$('.contacts-main').removeClass('contact-visible');
 
@@ -657,26 +657,7 @@ function contactsMapActive(){
 
 contactsMapActive();
 
-// $(document).ready(heightWindow);
-// $(window).resize(heightWindow);
 
-
-// // function heightWindow(){
-
-// // 	if(!!$('.production-slider').length){
-
-
-
-// // 		console.log($('.production-slide').find('img').height());
-
-// // 	}
-
-// // }
-
-
-// heightWindow();
-// $(document).ready(heightWindow);
-// $(window).resize(heightWindow);
 
 function mobileSearchOpen(){
 
@@ -927,9 +908,6 @@ function productPageTabs(){
 			}
 
 
-			// if($(this).attr('data-id-title')==$('.product-text-style').attr('data-id-text')){
-			// 	console.log($(this).attr('data-id-title'));
-			// }
 
 			
 		})
@@ -941,7 +919,7 @@ productPageTabs();
 function productPageSliderActive(){
 	if(!!$('.main-product-tabs').length){
 		if($(window).width()<650){
-			console.log('ok')
+			
 			$('.main-product-img-slider').slick({
 				arrows:false,
 				dots: true,
