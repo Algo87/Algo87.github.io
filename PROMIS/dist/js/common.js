@@ -162,6 +162,7 @@ $(document).ready(function() {
 			$('#subscription-button').removeClass('subscription-button-active');
 			
 			$('.btn').removeClass('btn-active');
+			$(".subscription-button-mobile").removeClass('subscription-button-mobile-active');
 			alert("thank for subscription!!!");
 			cleanForm('subscription-form');
 		},
@@ -423,7 +424,6 @@ function productionSliderOpen(){
 				}
 			});
 			
-
 		});
 
 
