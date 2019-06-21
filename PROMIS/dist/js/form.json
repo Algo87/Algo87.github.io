@@ -1,10 +1,1 @@
-{
-	"success": true,
-	"errors":[
-		{"field":"input-email", "message":"wrong email"},
-		{"field":"input-name", "message": "min length 2"},
-		{"field": "input-phone", "message": "min length 5"}
-	]
-		
-	
-}
+"true"
