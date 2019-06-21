@@ -100,7 +100,6 @@ gulp.task('prebuild', async function(){
 
 	var buildCss=gulp.src(['app/css/main.min.css',
 		'app/css/fonts.css'
-
 		])
 	.pipe(gulp.dest('dist/css'))
 
