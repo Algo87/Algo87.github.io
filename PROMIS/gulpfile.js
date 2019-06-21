@@ -98,15 +98,16 @@ gulp.task('img', async function() {
 
 gulp.task('prebuild', async function(){
 
-	var buildCss=gulp.src(['app/css/main.min.css',
-		'app/css/fonts.css'
-		])
+	var buildCss=gulp.src('app/css/main.min.css')
 	.pipe(gulp.dest('dist/css'))
 
 	var buildJs=gulp.src('app/js/**/*')
 	.pipe(gulp.dest('dist/js'))
 
 	var buildHtml=gulp.src('app/*.html')
+	.pipe(gulp.dest('dist'));
+
+	var buildFonts=gulp.src('app/fonts/**/*')
 	.pipe(gulp.dest('dist'));
 
 
