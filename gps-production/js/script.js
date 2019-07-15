@@ -46,14 +46,14 @@ $('.input_color').on('input', function(){
 	$('.input_color').css('filter', 'none')
 }); 
 
-$(document).ready(function() {
+
 	function cleanForm(){
 		var form = document.forms["form"];
 		for(var i=0; i<form.elements.length;i++){
 			form.elements[i].value="";
 		}
 	}
-});
+
 // портфолио
 $(document).ready(function() {
 	$('.portfolio_menu_name').click(function(){
