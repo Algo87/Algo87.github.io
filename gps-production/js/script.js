@@ -33,6 +33,7 @@ $(document).ready(function() {
 			element.before(error);
 		},
 		submitHandler: function(form) {
+			e.preventDefault();
 			alert();
 			cleanForm();
 		},
