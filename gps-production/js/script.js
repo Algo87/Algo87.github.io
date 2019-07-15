@@ -33,8 +33,9 @@ $(document).ready(function() {
 			element.before(error);
 		},
 		submitHandler: function(form) {
-			e.preventDefault();
-			alert();
+			event.preventDefault();
+			
+			alert("Thank You!!!");
 			cleanForm();
 		},
 	});
