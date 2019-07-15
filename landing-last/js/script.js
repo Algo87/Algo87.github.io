@@ -78,13 +78,13 @@ $('.nav-item').on('click', function(){
 
 // 	$('.nav-item').not(this).removeClass('active');
 
-	
-	
+
+
 // });
 
 
 var screenHeight=$(window).height();
-	var screenNeed=screenHeight/3;
+var screenNeed=screenHeight/3;
 
 function blockPosition(){
 
@@ -113,7 +113,7 @@ function blockPosition(){
 			$('.nav-item').not(navItem).removeClass('active');
 
 			return;
-		 }
+		}
 	}
 
 }
@@ -220,6 +220,14 @@ $(function(){
 
 			error.insertBefore(element);
 		},
+		submitHandler: function(form) {
+			event.preventDefault();
+			
+			alert("Thank You!!!");
+			cleanForm('contact-form');
+
+			
+		},
 		highlight: function (element, errorClass, validClass) { 
 			// console.log(validClass);
 			$(element).addClass(errorClass); 
@@ -235,5 +243,12 @@ $(function(){
      		} 
 
 
-	});
+     	});
 });
+function cleanForm(formId){
+	var form = document.getElementById(formId);
+	var countInput=form.elements.length - 2;
+	for(var i=0; i<countInput; i++){
+		form.elements[i].value="";
+	}
+}
