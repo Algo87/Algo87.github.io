@@ -2,3 +2,5 @@
 node_modules/
 #ignore psd folder
 psd/
+#ignore idea
+.idea/

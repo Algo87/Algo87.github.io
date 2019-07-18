@@ -326,7 +326,6 @@ y-axis
   width: 2px;
   height: 100%;
   margin: 0 auto;
-  -webkit-border-radius: 16px;
   border-radius: 16px; }
 
 .mCSB_scrollTools .mCSB_dragger {
@@ -343,7 +342,6 @@ y-axis
   width: 4px;
   height: 100%;
   margin: 0 auto;
-  -webkit-border-radius: 16px;
   border-radius: 16px;
   text-align: center; }
 
@@ -688,7 +686,6 @@ yx-axis
   width: 4px;
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-border-radius: 1px;
   border-radius: 1px; }
 
 .mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
@@ -696,7 +693,6 @@ yx-axis
   width: 4px;
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.75);
-  -webkit-border-radius: 1px;
   border-radius: 1px; }
 
 .mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
@@ -732,13 +728,11 @@ yx-axis
 .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 1px;
   border-radius: 1px; }
 
 .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.75);
-  -webkit-border-radius: 1px;
   border-radius: 1px; }
 
 .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
@@ -769,7 +763,6 @@ yx-axis
   width: 4px;
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
@@ -777,7 +770,6 @@ yx-axis
   width: 6px;
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.75);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 .mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail,
@@ -817,13 +809,11 @@ yx-axis
 .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.75);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
@@ -1069,8 +1059,6 @@ yx-axis
 .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-repeat: repeat-y;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%); }
@@ -1080,8 +1068,6 @@ yx-axis
 .mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
 .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
   background-repeat: repeat-x;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%); }
@@ -1105,7 +1091,6 @@ yx-axis
 .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail,
 .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  -webkit-border-radius: 16px;
   border-radius: 16px; }
 
 .mCS-3d.mCSB_scrollTools .mCSB_draggerRail,
@@ -1191,12 +1176,10 @@ yx-axis
 .mCS-3d-thick-dark.mCSB_scrollTools,
 .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer,
 .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer {
-  -webkit-border-radius: 7px;
   border-radius: 7px; }
 
 .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  -webkit-border-radius: 5px;
   border-radius: 5px; }
 
 .mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical,
@@ -1790,9 +1773,18 @@ li {
   text-align: center;
   line-height: 74px; }
   .language img {
-    line-height: normal;
-    display: inline-block;
-    vertical-align: middle; }
+    width: 31px;
+    height: 20px;
+    line-height: 74px;
+    width: 30px;
+    margin: 0 auto;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 20px;
+    display: block;
+    position: relative;
+    top: 50%; }
 
 .header_mobile {
   display: none; }
@@ -2283,7 +2275,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .location-flag, .location-triangle, .location-line {
   display: none;
-  stroke: #5e574c;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
@@ -2630,8 +2621,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .subscription-button {
   width: 58px;
   height: 58px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: #fff url("../img/Triangle-submit.svg") no-repeat;
   background-position: center center;
   position: absolute;
@@ -2645,8 +2635,7 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 94px;
     height: 94px;
     border: 1px solid #FF8B11;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
+    border-radius: 50%;
     position: absolute;
     top: -19px;
     content: "";
@@ -2760,8 +2749,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background: url("../img/Group 17.svg") no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   width: 30px !important;
   height: 30px !important;
   z-index: 2;
@@ -4837,8 +4825,7 @@ iframe {
             justify-content: center;
     height: 12px; }
     .main_slider .slick-dots button, .production-slider .slick-dots button, .main-product-img-slider .slick-dots button, .about-slider .slick-dots button {
-      -webkit-border-radius: 50%;
-              border-radius: 50%;
+      border-radius: 50%;
       width: 10px;
       height: 10px;
       background: #f7f4ef;
@@ -5137,8 +5124,7 @@ iframe {
   .flag {
     width: 32px;
     height: 24px;
-    -webkit-background-size: cover;
-            background-size: cover; }
+    background-size: cover; }
   .exp-block {
     position: relative;
     padding: 30px 15px 8px 15px;
@@ -5442,8 +5428,7 @@ iframe {
     height: 47px;
     bottom: -8px;
     right: 25%;
-    -webkit-background-size: cover;
-            background-size: cover; }
+    background-size: cover; }
   .header-breadcrumbs {
     display: none; }
   .header_mobile {
