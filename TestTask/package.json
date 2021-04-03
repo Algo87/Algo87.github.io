@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "img": "^3.0.3",
+    "style": "^0.0.3",
+    "u": "^0.1.0"
+  }
+}
