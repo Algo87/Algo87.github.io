@@ -1,34 +1,4 @@
-<<<<<<< HEAD
 "use strict";
-=======
-const getTemplate = (options) => {
-  const popup = document.createElement("div");
-  popup.className = "popup";
-  popup.innerHTML = `
-    <div class="popup__bg"></div>
-    <div class="popup__inner">
-      
-        <input type="checkbox"/>
-        <input type="text"/>
-        <button class="popup__close-btn" data-close="true"></button>
-      <div class="popup__video-container">
-        <iframe
-          class="popup__video"
-          src=${options.videoSrc}
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <input type="checkbox"/>
-        <input type="text"/>
-
-      </div>
-    </div>
-`;
-  return popup;
-};
->>>>>>> 67925e38543df994d423db628e31a7b93be55b35
 
 const _focusElements = [
   "a[href]",
@@ -170,7 +140,6 @@ class Popup {
 
   #setup() {
     this.$play.addEventListener("click", this.open);
-<<<<<<< HEAD
     this.$popup.addEventListener("click", this.closeListener);
     this.$popup.addEventListener("keydown", this.closeListener);
     this.$popup.addEventListener("keydown", this.tabPressControl);
@@ -196,22 +165,11 @@ class Popup {
     if (
       (event.type === "click" && event.target.dataset.close) ||
       (event.type === "keydown" && this.opened && event.keyCode === 27)
-=======
-    this.$popup.addEventListener("click", this.listener);
-    document.addEventListener("keydown", this.listener);
-  }
-
-  listener(event) {
-    if (
-      event.target.dataset.close ||
-      (event.keyCode === 27 && this.opened === true)
->>>>>>> 67925e38543df994d423db628e31a7b93be55b35
     ) {
       this.close();
     }
   }
 
-<<<<<<< HEAD
   open(event) {
     if (
       (event.type === "click" && !this.opened) ||
@@ -241,32 +199,5 @@ class Popup {
     this.$popup.removeEventListener("click", this.closeListener);
     this.$popup.removeEventListener("keydown", this.closeListener);
     this.$popup.removeEventListener("keydown", this.tabPressControl);
-=======
-  open() {
-    if (this.destroyed) {
-      console.log("Popup was destroyed!");
-      return;
-    }
-    this.opened = true;
-    this.closed = false;
-    typeof this.options.onOpen === "function" && this.options.onOpen();
-    this.#render();
-    this.$popup.classList.add("open");
-    this.focusContol();
-  }
-
-  close() {
-    this.opened = false;
-    this.closed = true;
-    typeof this.options.onClose === "function" && this.options.onClose();
-    this.$popup.classList.remove("open");
-    this.focusContol();
-  }
-
-  destroy() {
-    this.destroyed = true;
-    // this.$play.removeEventListener("click", this.open);
-    this.$popup.removeEventListener("click", this.listener);
->>>>>>> 67925e38543df994d423db628e31a7b93be55b35
   }
 }
