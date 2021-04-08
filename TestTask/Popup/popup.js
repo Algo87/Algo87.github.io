@@ -132,6 +132,7 @@ class Popup {
         width: "100%",
         videoId: videoId,
         origin: curUrl,
+        passive: true,
       });
     });
   }
