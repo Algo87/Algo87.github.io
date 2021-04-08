@@ -132,7 +132,6 @@ class Popup {
         width: "100%",
         videoId: videoId,
         origin: curUrl,
-        passive: true,
       });
     });
   }
@@ -142,10 +141,16 @@ class Popup {
   }
 
   #setup() {
-    this.$play.addEventListener("click", this.open);
-    this.$popup.addEventListener("click", this.closeListener);
-    this.$popup.addEventListener("keydown", this.closeListener);
-    this.$popup.addEventListener("keydown", this.tabPressControl);
+    this.$play.addEventListener("click", this.open, { passive: true });
+    this.$popup.addEventListener("click", this.closeListener, {
+      passive: true,
+    });
+    this.$popup.addEventListener("keydown", this.closeListener, {
+      passive: true,
+    });
+    this.$popup.addEventListener("keydown", this.tabPressControl, {
+      passive: true,
+    });
   }
 
   tabPressControl(event) {
