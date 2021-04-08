@@ -45,6 +45,7 @@ class Popup {
     this.opened = false;
     this.lastFocusedElement;
     this.player;
+    this.YTScript;
 
     const popupNodes = this.$popup.querySelectorAll(_focusElements);
     this.firstTabStop = popupNodes[0];
@@ -52,11 +53,11 @@ class Popup {
   }
 
   #createTagScriptForYoutybePay() {
-    const tag = document.createElement("script");
-    tag.setAttribute("src", "https://www.youtube.com/iframe_api");
+    this.YTScript = document.createElement("script");
+    this.YTScript.setAttribute("src", "https://www.youtube.com/iframe_api");
     document
       .getElementsByTagName("script")[0]
-      .insertAdjacentElement("beforebegin", tag);
+      .insertAdjacentElement("beforebegin", this.YTScript);
   }
 
   getTemplate() {
@@ -201,5 +202,7 @@ class Popup {
     this.$popup.removeEventListener("click", this.closeListener);
     this.$popup.removeEventListener("keydown", this.closeListener);
     this.$popup.removeEventListener("keydown", this.tabPressControl);
+    this.$popup.remove();
+    this.YTScript.remove();
   }
 }
