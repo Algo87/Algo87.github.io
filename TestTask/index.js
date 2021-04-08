@@ -36,13 +36,13 @@ const modal = new Popup("#play", {
       let dataLazy = lazy[i].getAttribute("data-lazy");
 
       if (isInViewport(lazy[i])) {
-        if (lazy[i].getAttribute("data-src")) {
+        let dataSrc = lazy[i].getAttribute("data-src");
+
+        if (dataSrc) {
           if (dataLazy === "img") {
-            lazy[i].src = lazy[i].getAttribute("data-src");
+            lazy[i].src = dataSrc;
           } else if (dataLazy === "background") {
-            lazy[i].style.backgroundImage = `url("${lazy[i].getAttribute(
-              "data-src"
-            )}")`;
+            lazy[i].style.backgroundImage = `url("${dataSrc}`;
           }
           lazy[i].removeAttribute("data-src");
         }
