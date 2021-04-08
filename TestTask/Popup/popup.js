@@ -125,11 +125,13 @@ class Popup {
   }
 
   startPlayer(videoId) {
+    let curUrl = window.location.href;
     window.YT.ready(() => {
       this.player = new YT.Player("player", {
         height: "100%",
         width: "100%",
         videoId: videoId,
+        origin: curUrl,
       });
     });
   }
