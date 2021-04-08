@@ -194,7 +194,6 @@ class Popup {
     this.$popup.classList.remove("open");
     this.player && this.player.destroy();
     this.opened = false;
-    this.destroy();
   }
 
   destroy() {
