@@ -1,10 +1,12 @@
+// Для отображения popup c текстом - можно раскомм ентировать свойства textTemplate и type:text, а videoId: "MB80ZuIJATI" и type: "video" убрать.
+// в этом случае в попапе отобразится html запусанный в свойстве textTemplate (стили для формы не задавала)
 const modal = new Popup("#play", {
   videoId: "MB80ZuIJATI",
   // textTemplate: `
+  // <form>
   //   <label for='1'>skjfskj1</label><input type='text' id='1' />
-  //   <label for='2'>skjfskj2</label><input type='checkbox' id='2' />
-  //   <label for='3'>skjfskj3</label><input type='checkbox' id='3' />
-  //   <label for='4'>skjfskj4</label><input type='text' id='4' />
+  //   <label for='2'>skjfskj4</label><input type='text' id='2' />
+  // </form>
   // `,
   type: "video",
   // type: "text",

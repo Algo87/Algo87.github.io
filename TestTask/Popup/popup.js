@@ -49,6 +49,12 @@ class Popup {
 
     this.initPlayer = new Promise(this.createTagScriptForPayer);
 
+    this.popupNodes =
+      this.type === "text" && this.$popup.querySelectorAll(_focusElements);
+    this.firstTabStop = this.type === "text" && this.popupNodes[0];
+    this.lastTabStop =
+      this.type === "text" && this.popupNodes[this.popupNodes.length - 1];
+
     this.firstTabStop;
     this.lastTabStop;
   }
