@@ -29,6 +29,7 @@ class Popup {
     this.startPlayer = this.startPlayer.bind(this);
     this.changeSizePopup = this.changeSizePopup.bind(this);
     this.onResize = this.onResize.bind(this);
+    this.createTagScriptForPayer = this.createTagScriptForPayer.bind(this);
 
     this.options = options;
     this.type = this.options.type || "text";
@@ -39,7 +40,6 @@ class Popup {
     this.$popupTextInner = options.textTemplate || "Default text";
     this.$popup = this.getTemplate();
 
-    this.#createTagScriptForYoutybePay();
     this.#setup();
     this.onResize();
     this.opened = false;
@@ -47,17 +47,19 @@ class Popup {
     this.player;
     this.YTScript;
 
-    const popupNodes = this.$popup.querySelectorAll(_focusElements);
-    this.firstTabStop = popupNodes[0];
-    this.lastTabStop = popupNodes[popupNodes.length - 1];
+    this.initPlayer = new Promise(this.createTagScriptForPayer);
+
+    this.firstTabStop;
+    this.lastTabStop;
   }
 
-  #createTagScriptForYoutybePay() {
+  createTagScriptForPayer(resolve) {
     this.YTScript = document.createElement("script");
     this.YTScript.setAttribute("src", "https://www.youtube.com/iframe_api");
     document
       .getElementsByTagName("script")[0]
       .insertAdjacentElement("beforebegin", this.YTScript);
+    resolve(true);
   }
 
   getTemplate() {
@@ -71,7 +73,6 @@ class Popup {
         ${
           this.type === "video"
             ? `
-            <input style="width:1px; height:1px; opacity:0; padding: 0; margin: 0;" type="checkbox" role="note" />
               <div
                 class="popup__video-container"
                 data-container
@@ -125,13 +126,13 @@ class Popup {
     popupInner.style.width = `${popupWidth}px`;
   }
 
-  startPlayer(videoId) {
+  startPlayer() {
     let curUrl = window.location.href;
     window.YT.ready(() => {
       this.player = new YT.Player("player", {
         height: "100%",
         width: "100%",
-        videoId: videoId,
+        videoId: this.options.videoId,
         origin: curUrl,
       });
     });
@@ -179,10 +180,15 @@ class Popup {
       (event.type === "keydown" && event.keyCode === "13" && !this.opened)
     ) {
       this.lastFocusedElement = document.activeElement;
-      this.firstTabStop.focus();
       this.#render();
       this.$popup.classList.add("open");
-      this.type === "video" && this.startPlayer(this.options.videoId);
+      this.type === "video" &&
+        this.initPlayer.then(this.startPlayer).then(() => {
+          const popupNodes = this.$popup.querySelectorAll(_focusElements);
+          this.firstTabStop = popupNodes[0];
+          this.lastTabStop = popupNodes[popupNodes.length - 1];
+        });
+      this.firstTabStop && this.firstTabStop.focus();
       typeof this.options.onOpen === "function" && this.options.onOpen();
       this.opened = true;
     }
