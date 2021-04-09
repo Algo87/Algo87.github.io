@@ -40,7 +40,7 @@ class Popup {
     this.$popupTextInner = options.textTemplate || "Default text";
     this.$popup = this.getTemplate();
 
-    this.#setup();
+    this.setup();
     this.onResize();
     this.opened = false;
     this.lastFocusedElement;
@@ -76,6 +76,7 @@ class Popup {
     popup.innerHTML = `
       <div class="popup__bg"></div>
       <div class="popup__inner">
+
         ${
           this.type === "video"
             ? `
@@ -84,6 +85,7 @@ class Popup {
                 data-container
                 style="width: ${popupWidth}px; height: ${popupHeight}px"
               >
+              <input type="checkbox" style="width:1px; height:1px; opacity:0;" />
                 <div id="player"></div>
               </div>
             `
@@ -144,11 +146,11 @@ class Popup {
     });
   }
 
-  #render() {
+  render() {
     document.body.appendChild(this.$popup);
   }
 
-  #setup() {
+  setup() {
     this.$play.addEventListener("click", this.open);
     this.$popup.addEventListener("click", this.closeListener);
     this.$popup.addEventListener("keydown", this.closeListener);
@@ -186,7 +188,7 @@ class Popup {
       (event.type === "keydown" && event.keyCode === "13" && !this.opened)
     ) {
       this.lastFocusedElement = document.activeElement;
-      this.#render();
+      this.render();
       this.$popup.classList.add("open");
       this.type === "video" &&
         this.initPlayer.then(this.startPlayer).then(() => {
