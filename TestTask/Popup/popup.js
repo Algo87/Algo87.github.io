@@ -85,7 +85,7 @@ class Popup {
                 data-container
                 style="width: ${popupWidth}px; height: ${popupHeight}px"
               >
-              <input type="checkbox" style="width:1px; height:1px; opacity:0;" />
+                <input type="checkbox" style="width:1px; height:1px; opacity:0;" />
                 <div id="player"></div>
               </div>
             `
